@@ -41,4 +41,9 @@ def start():
                     name = model.delete(uid)
                     view.print_msg(text.delete_successful(name))
             case 8:
+                if model.phone_book != model.original_pb:
+                    if view.input_data(text.save_confirm) == 'yes':
+                        model.save_file()
+                        view.print_msg(text.save_successful)
+                view.print_msg(text.good_bye)
                 break
