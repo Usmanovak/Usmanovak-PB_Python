@@ -27,6 +27,9 @@ rename_contact = ['Введите новое имя контакта (или Ent
 
 input_del_contact = 'Введите ID контакта, который хотите удалить: '
 
+save_confirm = 'У вас есть несохранённые изменения. Сохранить? (yes/no): '
+good_bye = 'До свидания, до новых встреч!'
+
 
 
 def added_succesful (name: str) -> str:
