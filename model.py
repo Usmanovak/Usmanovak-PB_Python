@@ -1,14 +1,19 @@
 
+from copy import deepcopy
+
 #осуществляем ф-ию открыть наши контакты:
 phone_book = {}
 path = 'phones.txt'
+original_pb = {}
 
 def open_file():
+    global original_pb
     with open(path, 'r', encoding='UTF-8') as file:
         contacts = file.readlines()
     for contact in contacts:
         uid, name, phone, comment = contact.strip().split(';')        #стрип - убирает ненужные символы
         phone_book[int(uid)] = [name, phone, comment]
+    original_pb = deepcopy(phone_book)
 #открыли файл на чтение и сделали упорядоченный словарь
 
 
